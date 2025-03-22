@@ -4,11 +4,23 @@
     margin: 0 auto;
     width: 25%;
   }
+  input {
+    width: 25%;
+    margin: 0 auto;
+    display: block;
+  }
+  h1 {
+    text-align: center;
+  }
 </style>
 
 <div>
-  <h1>{{this.title}}</h1>
+  <h1>Hello {{this.username}} form BridgeLabz</h1>
   <img [src]="imgUrl" (click)="onClick($event)" alt="The BridgeLabz logo: a bridge to employment through lab works."/>
+  <div>
+    <input type="text" [(ngModel)]="username" placeholder="Enter your name" /> <br />
+    <br />
+  </div>
 </div>
 
 <router-outlet />
